@@ -2,12 +2,34 @@
   "name": "Getting Started Example",
   "version": "1.0",
   "description": "Build an Extension!",
-  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "permissions": [
+    "activeTab", 
+    "declarativeContent", 
+    "storage",
+    "videoCapture",
+    "https://a2d63cb15072.ngrok.io/*",
+    "https://meet.google.com"
+  ],
   "options_page": "options.html",
   "background": {
-    "scripts": ["background.js"],
+    "scripts": [
+      "background.js"
+    ],
     "persistent": false
   },
+  "content_scripts": [
+    {
+      "matches": ["https://meet.google.com/*"],
+      "js": [
+        "node_modules/tracking/build/tracking-min.js",
+        "node_modules/tracking/build/data/face-min.js",
+        "node_modules/tracking/build/data/eye-min.js",
+        "node_modules/tracking/build/data/mouth-min.js",
+        "backendUrl.js",
+        "getFrame.js"
+      ]
+    }
+  ],
   "page_action": {
     "default_popup": "popup.html",
     "default_icon": {
