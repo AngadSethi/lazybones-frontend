@@ -7,8 +7,10 @@
     "declarativeContent", 
     "storage",
     "videoCapture",
+    "identity",
+    "identity.email",
     "https://a2d63cb15072.ngrok.io/*",
-    "https://meet.google.com"
+    "tabs"
   ],
   "options_page": "options.html",
   "background": {
@@ -21,12 +23,14 @@
     {
       "matches": ["https://meet.google.com/*"],
       "js": [
+        "getUserData.js",
         "node_modules/tracking/build/tracking-min.js",
         "node_modules/tracking/build/data/face-min.js",
         "node_modules/tracking/build/data/eye-min.js",
         "node_modules/tracking/build/data/mouth-min.js",
         "backendUrl.js",
-        "getFrame.js"
+        "getFrame.js",
+        "tabStat.js"
       ]
     }
   ],
