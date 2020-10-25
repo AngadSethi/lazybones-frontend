@@ -9,7 +9,7 @@
     "videoCapture",
     "identity",
     "identity.email",
-    "https://a2d63cb15072.ngrok.io/*",
+    "https://637f7dab7c75.ngrok.io/*",
     "tabs"
   ],
   "options_page": "options.html",
