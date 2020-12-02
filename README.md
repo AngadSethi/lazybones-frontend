@@ -1,2 +1,2 @@
-# ufocusx
-A module for bolstering interactivity and attention of students in online classes
+# LazyBones
+A Google chrome plugin which integrates with Google meet and assigns a score to each student based on their attention.
