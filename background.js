@@ -23,7 +23,7 @@ chrome.runtime.onInstalled.addListener(function() {
 });
 
 var USER_INFO;
-chrome.identity.getProfileUserInfo(function(info) { 
+chrome.identity.getProfileUserInfo(function(info) {
   USER_INFO = info;
 });
 
@@ -32,3 +32,7 @@ chrome.runtime.onMessage.addListener(
     if (request.greeting == "hello")
       sendResponse({info: USER_INFO});
   });
+
+chrome.tabs.onHighlighted.addListener(function(highlightInfo) {
+  console.log(highlightInfo);
+});
